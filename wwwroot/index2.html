@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To-do CRUD</title>
+    <link rel="stylesheet" href="css/siteSnausage.css" /><!--initially css/site.css-->
+</head>
+<body onload="defaultDueDate();">
+    <h1>To-do CRUD</h1>
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem();">
+        <!--initially addItem().  daviesAlert() & daviesAlert2(document.getElementById('add-name').value) work in wwwroot/siteSnausage.js-->
+        <table><thead><tr><th>Thing to do</th><th>Due Date</th><th>Submit</th></tr></thead>
+               <tr>
+                   <td with="200"><input type="text" id="add-name" placeholder="Yo, type something in here homey" size="50"></td>
+                   <td><input type="date" id="add-dueDate" /></td>  <!--added 2021-02-24 2:49-->
+                   <td><input type="submit" value="Add"></td>
+               </tr>
+        </table>
+    </form>
+    <div id="editForm">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <table>
+                <thead><tr><th>is complete?</th><th>name</th>
+                    <th>due date</th><th>submit or cancel</th></tr></thead>
+                <tr>
+                    <td><input type="checkbox" id="edit-isComplete"></td>
+                    <td><input type="text" id="edit-name" size="50"></td>
+                    <td><input type="date" id="edit-dueDate" /></td> <!--added 2021-02-24 2:57, commented 3:26-->
+                    <td><input type="submit" value="Save"><a onclick="closeInput()" aria-label="Close">&#10006;</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+        <p id="counter"></p>
+        <div id="davesDiv">Hi, I'm davesDiv</div>
+        <script src="js/davey.js" asp-append-version="true">/*originally: js/site.js*/ </script>
+        <script type="text/javascript">
+            getItems();
+        </script>
+    </body>
+    </html>
