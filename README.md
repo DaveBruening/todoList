@@ -7,4 +7,5 @@ I added some neat features, like:<br/>
 -	The DateTime dueDate field<br/> 
 -	Putting the Add and Edit forms in a table with headings<br/>
 -	Using the classic input element/tag for form controls instead of document.createElement<br/>
--	Using green font for completed items and red for incomplete
+-	Using green font for completed items and red for incomplete<br/><br/>
+-	P.S. Some of my variables names and text messages are silly.  No disrepect or offense is intended.  Tt's a way to keep programming fun and entertaining since, even though I like it, it gets dry.
